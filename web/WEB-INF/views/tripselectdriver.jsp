@@ -193,7 +193,7 @@
                                                                 <tr>
                                                             <form action="selectvehicle">
                                                                 <%-- <td><c:out value="${row.id}"/></td>--%>
-                                                                <td><c:out value="${row.driverId}"/></td>
+                                                                <td><c:out value="${row.dName}"/></td>
                                                                 <td><c:out value="${row.dLicense}"/></td>
                                                                 <td><c:out value="${row.dLicenseCat}"/></td>
                                                                 <td><c:out value="${row.phone}"/></td>

@@ -40,7 +40,7 @@ public class VehicleDriverController {
     @RequestMapping(value = "/adddriver", method = RequestMethod.POST)
     public String addNewDriver(@RequestParam(value = "salary") String salary, @RequestParam(value = "phone") String phone, @RequestParam(value = "dname") String driverName, @RequestParam(value = "licenceno") String licenceNo, @RequestParam(value = "licencecat") String licenceCat) {
         Double dSalary = Double.parseDouble(salary);
-        VehicleDriver driver = new VehicleDriver(phone, licenceNo, licenceCat, phone, dSalary);
+        VehicleDriver driver = new VehicleDriver(driverName, licenceNo, licenceCat, phone, dSalary);
         service.addNewVehicleDriver(driver);
         return "adddriver";
     }

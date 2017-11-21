@@ -143,7 +143,7 @@
                 <section class="wrapper">
                     <div class="row">
                         <div class="col-lg-12">
-                            <h3 class="page-header"><i class="fa fa fa-bars"></i>View Customers</h3>
+                            <h3 class="page-header"><i class="fa fa fa-bars"></i>Select Vehicle For Trip</h3>
                             <ol class="breadcrumb">
                                 <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
                                 <li><i class="fa fa-bars"></i>Pages</li>
@@ -178,17 +178,17 @@
                                                     SELECT * from vehicle where vPlate LIKE "${param.vplate}"'%';
                                                 </sql:query>
 
-                                                <table class="table table-striped table-advance table-hover">
+                                                <table class="table table-striped table-advance table-hover2">
                                                     <tbody>
                                                         <tr>
-                                                            <th><i class="icon_profile"></i></th>
-                                                            <th><i class="icon_calendar"></i> Date</th>
-                                                            <th><i class="icon_mail_alt"></i> Email</th>
-                                                            <th><i class="icon_pin_alt"></i> City</th>
-                                                            <th><i class="icon_mobile"></i> Mobile</th>
-                                                            <th><i class="icon_cogs"></i> Action</th>
-                                                            <th><i class="icon_cogs"></i> Action</th>
-                                                            <th><i class="icon_cogs"></i> Action</th>
+                                                            <th><i class="icon_profile"></i>Vehicle-Name</th>
+                                                            <th><i class="icon_calendar"></i> Registration-Plate</th>
+                                                            <th><i class="icon_mail_alt"></i> Type</th>
+                                                            <th><i class="icon_pin_alt"></i> Model</th>
+                                                            <th><i class="icon_mobile"></i> AC</th>
+                                                            <th><i class="icon_cogs"></i> Vehicle Year</th>
+                                                            <th><i class="icon_cogs"></i> Charge Per 1KM</th>
+                                                            <th><i class="icon_cogs"></i></th>
                                                         </tr>
                                                         <tr>
                                                     <form action="createtrip">
@@ -210,7 +210,7 @@
                                                                 <input type="hidden" name="vid" value="${row.vId}">
                                                                 </td>
                                                                 <td>
-                                                                   <td><a href="http://localhost:8080/App2.2/createtrip?cusid=<c:out value="${cusid}"/>&from=<c:out value="${from}"/>&to=<c:out value="${to}"/>&driverid=<c:out value="${driverid}"/>&vid=<c:out value="${row.vId}"/>&heding=<c:out value="${heding}"/>">Select</a></td>
+                                                                <td><a class="btn-primary btn" href="http://localhost:8080/App2.2/createtrip?cusid=<c:out value="${cusid}"/>&from=<c:out value="${from}"/>&to=<c:out value="${to}"/>&driverid=<c:out value="${driverid}"/>&vid=<c:out value="${row.vId}"/>&heding=<c:out value="${heding}"/>">Select</a></td>
                                                                 </td>
                                                                 </c:forEach>
                                                             </td>
